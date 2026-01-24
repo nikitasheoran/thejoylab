@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="joylab.js" defer></script>
+  <title>The Joy Lab</title>
+</head>
+
+<body>
+  <header>  
+    <nav>
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="media/joylablogo.jpg" alt="The Joy Lab Logo" />
+        </a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="calculator.html">Calculate</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <p class="calculator-intro">
+  Plan your project budget with ease. Just add your materials, quantity, and unit price — we’ll handle the rest!
+  </p>
+
+  <div class="calc-container"> 
+    <article>
+      <h2>Material Cost Calculator</h2>
+      <form id="materialForm">
+        <label>Material:
+          <input type="text" id="materialname" placeholder="Enter material name you used" required />
+        </label>
+        <br>
+        <label>Quantity:
+          <input type="number" id="usedquantity" min="1" placeholder="Enter the quantity of material" required />
+        </label>
+        <br>
+        <label>Price As Per Unit:
+          <input type="number" id="priceperunit" min="0.01" step="0.01" placeholder="Enter price per unit" required />
+        </label>
+        <br>
+        <!-- New commission input -->
+        <label>Commission Percentage (%):
+          <input type="number" id="commissionPercent" min="0" max="100" step="0.1" placeholder="Enter commission %" />
+        </label>
+        <br>
+        <input type="button" id="additem" value="Add Item" onclick="estdCost()" />
+      </form>
+    </article>
+  
+    <aside>
+      <h3>Estimated Cost Summary</h3>
+      <ul id="itemList"></ul>
+      <p><strong>Subtotal:</strong> <span id="subtotal">$0.00</span></p>
+      <p><strong>Tax (7%):</strong> <span id="taxAmount">$0.00</span></p>
+      <p><strong>Commission:</strong> <span id="commissionAmount">$0.00</span></p> <!-- New commission display -->
+      <p><strong>Total with Tax and Commission:</strong> <span id="totalCost">$0.00</span></p>
+    </aside>
+   
+  </div>
+   <p class="calculator-note">
+  Every little detail counts! Keep track of what you use and see your estimated cost update in real time.
+    </p>
+
+</main>
+
+  <footer>
+    <p>&copy; 2025 The Joy Lab. All rights reserved.</p>
+    <p><a href="mailto:info@thejoylabs.com">info@thejoylabs.com</a></p>
+  </footer>
+</body>
+</html>

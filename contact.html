@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css"> <!-- optional form-specific styles -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="joylab.js" defer></script>
+  <script src="contact.js" defer></script> <!-- Form validation logic -->
+  <title>The Joy Lab</title>
+</head>
+
+<body>
+<header>  
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="media/joylablogo.jpg" alt="The Joy Lab Logo">
+      </a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="calculator.html">Calculate</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <p class="contactparagraph">You can contact us anytime to register for a class, ask questions, or learn more about our programs. We’re here to help you start your creative journey!<br>
+  Find our location on the map below — we’d love to welcome you in person at The Joy Lab.</p>
+  <div class="contact-info-bar">
+    <p><strong>📞 Call us:</strong> +1 (226) 886-1317 &nbsp; | &nbsp;
+       <strong>📧 Email:</strong> <a href="mailto:info@thejoylabs.com">info@thejoylabs.com</a> &nbsp; | &nbsp;
+       <strong>📍 Location:</strong> Nangla, Haryana, India
+    </p>
+  </div>
+  <section class="map-section">
+  <h2>Find Us Here</h2>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28018.73384510384!2d75.99530532498231!3d28.619518442963823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3912f43f89ebb6d3%3A0x119124ea8502af12!2sNangla%2C%20Haryana%20127030%2C%20India!5e0!3m2!1sen!2sca!4v1751315515649!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
+  </div>
+</section>
+<p class="contactparagraph"> You can fill the registration form to book classes!!!</p>
+  <section class="form-section">
+    <h1>Register to apply for classes by The Joy Lab</h1>
+    <form id="registrationForm">
+      <label for="name">Full Name: *</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address: *</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Create Password: *</label>
+      <input 
+        type="password" 
+        id="password" 
+        name="password" 
+        required 
+        minlength="6"
+        title="Password must include at least one number and one special character (_, -, #)" 
+      />
+
+      <label for="course">Select Your Course: *</label>
+      <select id="course" name="course" required>
+        <option value="">--Choose--</option>
+        <option value="DIY Masterclass">DIY Masterclass</option>
+        <option value="Creative Cooking">Creative Cooking</option>
+        <option value="Art & Craft">Art & Craft</option>
+        <option value="Gardening">Gardening</option>
+        <option value="Candle Making">Candle Making</option>
+      </select>
+
+      <fieldset>
+        <legend>Select Your Interests (Choose at least 1): *</legend>
+
+        <label><input type="checkbox" name="interests" value="DIY"> DIY</label><br>
+        <label><input type="checkbox" name="interests" value="Cooking"> Cooking</label><br>
+        <label><input type="checkbox" name="interests" value="Crafts"> Crafts</label><br>
+        <label><input type="checkbox" name="interests" value="Painting"> Painting</label><br>
+        <label><input type="checkbox" name="interests" value="Gardening"> Gardening</label><br>
+        <label><input type="checkbox" name="interests" value="Dancing"> Dancing</label><br>
+
+      </fieldset>
+
+      
+      <button type="submit">Submit Registration</button>
+      <p id="formMsg"></p>
+    </form>
+  </section>
+
+  <p class="contactparagraph"> We would be happy to hear from you about our services. Express you point of view. </p>
+<section class="feedback-section">
+  <h2>Send Us Your Feedback</h2>
+  <form id="simpleFeedbackForm">
+    <label for="fbName" required>Name :</label>
+    <input type="text" id="fbName" name="fbName" placeholder="Your name" />
+
+    <label for="fbEmail">Email (required):</label>
+    <input type="email" id="fbEmail" name="fbEmail" placeholder="you@example.com" required />
+
+    <label for="fbComments" required>Feedback:</label>
+    <textarea id="fbComments" name="fbComments" rows="4" placeholder="Write your feedback here..." required></textarea>
+
+    <button type="submit">Submit Feedback</button>
+    <p id="fbMessage"></p>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 The Joy Lab. All rights reserved.</p>
+  <p><a href="mailto:info@thejoylabs.com">info@thejoylabs.com</a></p>
+</footer>
+</body>
+</html>
